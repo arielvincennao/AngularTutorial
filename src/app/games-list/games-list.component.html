@@ -1,0 +1,32 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col">Category</th>
+        <th scope="col"><i class="fi-rr-dollar"></i></th>
+        <th scope="col">Stock</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let game of games" [ngClass]="{'isOffer': game.isOffer}">
+        <td><img src="{{game.image}}" alt="{{game.name}}" style="height: 50px;"></td>
+        <td>{{game.name}}</td>
+        <td>{{game.category}}</td>
+        <td>{{game.price | currency}}</td>
+        <td>
+            <span *ngIf="game.stock>0">{{game.stock}}</span>
+            <span class="badge badge-warning" *ngIf="game.stock==0">NO STOCK</span>
+        </td>
+        <td>
+        <button type="button" class="btn btn-info btn-sm" (click)="downQuantity(game)"><i class="fi-rr-caret-down"></i></button>
+           <input type="text" [(ngModel)]="game.quantity" (keyup)="changeQuantity($event, game)" maxlength="2" size="2">
+           <!--{{game.quantity}}-->
+        <button type="button" class="btn btn-info btn-sm" (click)="upQuantity(game)"><i class="fi-rr-caret-up"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+ 
