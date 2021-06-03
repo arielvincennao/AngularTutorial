@@ -1,0 +1,3 @@
+<button type="button" class="btn btn-info btn-sm" (click)="downQuantity()"><i class="fi-rr-caret-down"></i></button>
+<input type="text" [(ngModel)]="quantity" (keyup)="changeQuantity($event)" maxlength="2" size="2">
+<button type="button" class="btn btn-info btn-sm" (click)="upQuantity()"><i class="fi-rr-caret-up"></i></button>

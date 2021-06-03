@@ -11,6 +11,7 @@ import { CartComponent } from './cart/cart.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GamesContactComponent } from './games-contact/games-contact.component';
 import { GamesNotFoundComponent } from './games-not-found/games-not-found.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { GamesNotFoundComponent } from './games-not-found/games-not-found.compon
     GamesStoreComponent,
     CartComponent,
     GamesContactComponent,
-    GamesNotFoundComponent
+    GamesNotFoundComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,

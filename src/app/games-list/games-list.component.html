@@ -20,10 +20,8 @@
             <span class="badge badge-warning" *ngIf="game.stock==0">NO STOCK</span>
         </td>
         <td>
-        <button type="button" class="btn btn-info btn-sm" (click)="downQuantity(game)"><i class="fi-rr-caret-down"></i></button>
-           <input type="text" [(ngModel)]="game.quantity" (keyup)="changeQuantity($event, game)" maxlength="2" size="2">
-           <!--{{game.quantity}}-->
-        <button type="button" class="btn btn-info btn-sm" (click)="upQuantity(game)"><i class="fi-rr-caret-up"></i></button>
+            <app-input-integer [(quantity)]="game.quantity" [max]="game.stock" *ngIf="game.stock"></app-input-integer>
+            {{game.quantity}}
         </td>
       </tr>
     </tbody>
