@@ -12,6 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { GamesContactComponent } from './games-contact/games-contact.component';
 import { GamesNotFoundComponent } from './games-not-found/games-not-found.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { InputIntegerComponent } from './input-integer/input-integer.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

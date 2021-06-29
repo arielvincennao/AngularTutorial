@@ -21,10 +21,9 @@
         </td>
         <td>
             <app-input-integer [(quantity)]="game.quantity" [max]="game.stock" *ngIf="game.stock"></app-input-integer>
-            {{game.quantity}}
+            <button class="btn btn-info btn-sm" (click)="addToCart(game)" *ngIf="game.stock>0">Buy</button>
         </td>
       </tr>
     </tbody>
   </table>
-  
  
