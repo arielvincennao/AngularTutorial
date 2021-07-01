@@ -7,7 +7,7 @@ import { Game } from './games-list/game';
 })
 
 
-  //logica del carrito
+  //Logica del carrito
 
 export class GameCartService {
 

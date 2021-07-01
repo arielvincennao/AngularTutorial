@@ -20,8 +20,7 @@ export class GamesListComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.gamesService.getAll().subscribe(games => this.games = games);
-    
+    this.gamesService.getGames().subscribe(games => this.games = games);
   }
 
   addToCart(game: any): void {
